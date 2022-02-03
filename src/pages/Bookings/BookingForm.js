@@ -85,7 +85,16 @@ export default function BookingForm() {
               options={BookingService.getcoverCollection()}
               error={errors.coverId}
             />
+          <Grid item xs={2}>
+          <Controls.TimeButtons
+            name="dinner"
+            label="Dinner"
+            value={values.dinner}
+            onChange={handleInputChange}
+            items={dinnerItems}
+          />
 
+          </Grid>
             <Grid item xs={2} rowSpacing={12}>
               <Container item spacing={1}>
                 <TimeButtons
@@ -193,14 +202,6 @@ export default function BookingForm() {
           />
         </Grid>
         <Grid item xs={12}>
-          <Controls.TimeButtons
-            name="dinner"
-            label="Dinner"
-            value={values.dinner}
-            onChange={handleInputChange}
-            items={dinnerItems}
-          />
-
           <Controls.Checkbox
             name="isPermanent"
             label="Permanent Booking"

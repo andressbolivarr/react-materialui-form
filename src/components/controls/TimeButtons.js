@@ -10,7 +10,7 @@ items.map(item=>console.log(item))
         <FormControl>
             <FormLabel>{label}</FormLabel>
                     { items && items.map (  
-                        item => (<Button variant='contained' key={item.id}> {item.title}</Button>)
+                        item => (<Button variant='contained' testid={`TimeButton-${item.id}`} key={item.id}> {item.title}</Button>)
                     )}
         </FormControl>
     )   
